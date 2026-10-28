@@ -41,7 +41,7 @@ export const cases = [
     title: 'Синхронная расшифровка встреч и AI-резюме',
     company: 'МТС Линк', period: '2023 — 2024',
     tags: ['B2B SaaS', 'Web', 'AI', 'MVP'],
-    cover: 'mts-cover.png',
+    cover: 'mts-cover.jpg',
     summary: 'Расшифровка во время встречи, AI-резюме и работа с текстом в личном кабинете. Две итерации.',
     role: 'Я единственный дизайнер функции: от конкурентного анализа до usability-тестов и дизайн-ревью.',
     sections: [
