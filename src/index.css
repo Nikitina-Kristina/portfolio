@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-bone text-ink font-sans antialiased; }
+  ::selection { background: #E8A33D55; }
+}
+@layer components {
+  .wrap { @apply mx-auto max-w-5xl px-6; }
+  .btn { @apply inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition; }
+  .btn-primary { @apply bg-ink text-bone hover:bg-amber hover:text-ink; }
+  .btn-ghost { @apply border border-line bg-card hover:border-ink; }
+  .tag { @apply rounded-full border border-line bg-card px-3 py-1 font-mono text-xs text-muted; }
+  .card { @apply rounded-3xl border border-line bg-card; }
+}
