@@ -28,11 +28,19 @@ export default function Case() {
               <ul className="mt-4 space-y-3">
                 {s.list.map((t, k) => (
                   <li key={k} className="relative pl-5 leading-relaxed text-ink/90">
-                    <span className="absolute left-0 top-[0.65em] h-1.5 w-1.5 rounded-full bg-amber" />{t}
+                    <span className="absolute left-0 top-[0.65em] h-1.5 w-1.5 rounded-full bg-amber" />
+                    {typeof t === 'string' ? t : <><b className="font-bold text-ink">{t.b}</b> {t.t}</>}
                   </li>
                 ))}
               </ul>
             )}
+            {s.subs?.map((u) => (
+              <div key={u.h} className="mt-10">
+                <h3 className="text-xl font-extrabold">{u.h}</h3>
+                {u.p?.map((x, k) => <p key={k} className="mt-3 leading-relaxed text-ink/90">{x}</p>)}
+                {u.img?.map((im) => <Img key={im.src} src={im.src} caption={im.caption} />)}
+              </div>
+            ))}
             {s.img?.map((im) => <Img key={im.src} src={im.src} caption={im.caption} />)}
           </Reveal>
         ))}
