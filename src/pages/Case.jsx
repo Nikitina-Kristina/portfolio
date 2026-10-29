@@ -34,6 +34,7 @@ export default function Case() {
                 ))}
               </ul>
             )}
+            {s.p2?.map((t, k) => <p key={k} className="mt-4 leading-relaxed text-ink/90">{t}</p>)}
             {s.subs?.map((u) => (
               <div key={u.h} className="mt-10">
                 <h3 className="text-xl font-extrabold">{u.h}</h3>
