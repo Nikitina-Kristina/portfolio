@@ -8,7 +8,7 @@ export default {
       },
       fontFamily: {
         sans: ['Onest', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        mono: ['Onest', 'system-ui', 'sans-serif'],
       },
     },
   },
