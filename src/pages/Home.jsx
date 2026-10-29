@@ -53,12 +53,10 @@ export default function Home() {
 
       <section className="wrap py-20 md:py-28">
         <Reveal>
-          <div className="grid gap-10 md:grid-cols-2 md:gap-16">
-            <div>
-              <h2 id="about" className="scroll-mt-24 text-4xl font-extrabold leading-tight md:text-6xl">Обо мне</h2>
-              <img src={img('avatar-portrait.jpg')} alt={profile.name} className="mt-8 aspect-[4/5] w-full max-w-sm rounded-[24px] object-cover shadow-xl shadow-deep/20" />
-            </div>
-            <div className="space-y-5 leading-relaxed text-ink/85 md:pt-3">
+          <h2 id="about" className="scroll-mt-24 text-4xl font-extrabold leading-tight md:text-6xl">Обо мне</h2>
+          <div className="mt-8 grid gap-10 md:mt-10 md:grid-cols-2 md:items-center md:gap-16">
+            <img src={img('avatar-portrait.jpg')} alt={profile.name} className="aspect-[4/5] w-full max-w-sm rounded-[24px] object-cover shadow-xl shadow-black/15" />
+            <div className="space-y-5 leading-relaxed text-ink/85">
               {profile.about.map((t) => <p key={t}>{t}</p>)}
             </div>
           </div>
@@ -97,11 +95,11 @@ export default function Home() {
           <div className="mt-10 divide-y divide-line border-y border-line">
             {experience.map((e) => (
               <div key={e.company + e.period} className="grid gap-2 py-6 md:grid-cols-[200px_1fr] md:gap-8">
-                <p className="font-mono text-xs text-muted md:pt-1">{e.period}</p>
+                <p className="text-sm text-muted md:pt-0.5">{e.period}</p>
                 <div>
-                  <h3 className="font-bold">{e.role} <span className="font-medium text-muted">· {e.company}</span></h3>
+                  <h3 className="font-medium text-muted">{e.role} <span className="font-extrabold text-ink">· {e.company}</span></h3>
                   <p className="mt-2 text-sm text-muted">{e.text}</p>
-                  {e.caseSlug && <Link to={`/case/${e.caseSlug}`} className="mt-2 inline-block text-sm font-semibold underline decoration-amber decoration-2 underline-offset-4">Смотреть кейс</Link>}
+                  {e.caseSlug && <Link to={`/case/${e.caseSlug}`} className="btn mt-4 bg-mist text-deep hover:bg-deep hover:text-white">Смотреть кейс</Link>}
                 </div>
               </div>
             ))}
