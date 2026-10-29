@@ -294,7 +294,7 @@ export const cases = [
     sections: [
       { h: 'PolyService',
         note: 'Rochev-studio · услуги в сфере профессионального AV и IT.',
-        link: { href: 'https://play.google.com/store/apps/details?id=com.polyservice&hl=ru&gl=US&pli=1', label: 'Приложение в Google Play' },
+        link: { href: 'https://play.google.com/store/apps/details?id=com.polyservice&hl=ru&gl=US&pli=1', label: 'Google Play' },
         pTitle: 'О проекте',
         p: ['Мобильное приложение компании PolyService, предоставляющей услуги в сфере профессионального аудио-видео оборудования и IT.'],
         listTitle: 'Моя роль',
