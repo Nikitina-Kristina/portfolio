@@ -127,8 +127,7 @@ export default function Home() {
         <section className="wrap py-24 text-center md:py-32">
           <Reveal>
             <h2 id="contacts" className="scroll-mt-24 text-4xl font-extrabold leading-tight md:text-6xl">Контакты</h2>
-            <p className="mx-auto mt-5 max-w-xl text-white/70">Открыта к позициям Product Designer в IT-компаниях, полностью удалённо.</p>
-            <div className="mt-9 flex flex-wrap justify-center gap-3">
+            <div className="mt-10 flex flex-wrap justify-center gap-3">
               <a href={`mailto:${site.email}`} className="btn bg-iris text-white hover:bg-white hover:text-iris">{site.email}</a>
               <a href={site.telegram} target="_blank" rel="noreferrer" className="btn btn-outline-light">Telegram {site.telegramLabel}</a>
               <a href={site.hh} target="_blank" rel="noreferrer" className="btn btn-outline-light">Резюме на hh.ru</a>
