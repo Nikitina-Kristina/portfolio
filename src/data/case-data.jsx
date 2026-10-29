@@ -52,6 +52,7 @@ export const cases = [
   },
   {
     slug: 'mts-link-transcription',
+    links: [{ label: 'Сайт МТС Линк', href: 'https://mts-link.ru/' }],
     title: 'Расшифровка встреч и AI-резюме',
     company: 'МТС Линк', period: '2023–2024',
     tags: ['B2B SaaS', 'Web', 'AI', 'MVP'],
@@ -165,6 +166,10 @@ export const cases = [
   },
   {
     slug: 'my-subsidies',
+    links: [
+      { label: 'Сайт сервиса', href: 'https://subsidiya.tatarstan.ru/landing/' },
+      { label: 'App Store', href: 'https://apps.apple.com/ru/app/%D0%BC%D0%BE%D0%B8-%D1%81%D1%83%D0%B1%D1%81%D0%B8%D0%B4%D0%B8%D0%B8/id1535217114' },
+      { label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=ru.tstst.mysubsidie&pli=1' }],
     title: 'Сервис оформления государственных субсидий',
     company: 'Сбер', period: '2022–2023',
     tags: ['B2G', 'Web + Mobile', 'Развитие продукта'],
@@ -205,6 +210,7 @@ export const cases = [
   },
   {
     slug: 'innopolis-digital-twin', minor: true,
+    links: [{ label: 'Цифровая модель города', href: 'https://4d.innocityhall.ru/' }],
     title: 'Цифровой двойник города',
     company: 'Университет Иннополис', period: '2021',
     tags: ['B2G', 'Web + Mobile', 'UI-kit'],

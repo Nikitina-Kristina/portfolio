@@ -18,6 +18,11 @@ export default function Case() {
       <h1 className="mt-5 max-w-3xl text-4xl font-extrabold leading-tight md:text-6xl">{c.title}</h1>
       <p className="mt-4 flex flex-wrap items-baseline gap-x-3 text-muted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 self-center text-iris" aria-hidden="true"><path d="M4 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16M14 10h5a1 1 0 0 1 1 1v10M3 21h18M8 8h2M8 12h2M8 16h2"/></svg><span className="text-xl font-extrabold text-ink md:text-2xl">{c.company}</span><span className="font-mono text-sm">{c.period}</span></p>
       <p className="mt-6 max-w-2xl text-lg text-muted">{c.role}</p>
+      {c.links && (
+        <div className="mt-6 flex flex-wrap gap-3">
+          {c.links.map((l) => <a key={l.href} href={l.href} target="_blank" rel="noreferrer" className="btn btn-sm bg-mist text-deep hover:bg-deep hover:text-white">{l.label} ↗</a>)}
+        </div>
+      )}
       <Img src={c.cover} className="my-10" />
 
       <div className="max-w-3xl">
