@@ -52,7 +52,7 @@ export const cases = [
   },
   {
     slug: 'mts-link-transcription',
-    title: 'МТС Линк: расшифровка встреч и AI-резюме',
+    title: 'Расшифровка встреч и AI-резюме',
     company: 'МТС Линк', period: '2023–2024',
     tags: ['B2B SaaS', 'Web', 'AI', 'MVP'],
     cover: 'mts-cover.jpg',
@@ -111,7 +111,7 @@ export const cases = [
   },
   {
     slug: 'yandex-payments',
-    title: 'Яндекс: сервис управления платежами',
+    title: 'Сервис управления платежами',
     company: 'Яндекс', period: '2022–2023',
     tags: ['B2B', 'Web', 'Таблицы и данные', 'Исследования'],
     cover: 'yandex-cover.jpg',

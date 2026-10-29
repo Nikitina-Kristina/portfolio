@@ -20,13 +20,12 @@ export default function Home() {
           <p className="mx-auto mt-5 max-w-xl text-white/70">B2B и B2G продукты: сложные данные, роли и согласования простым языком интерфейса.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <button onClick={() => scrollTo('cases')} className="btn bg-iris text-white hover:bg-white hover:text-iris">Смотреть кейсы</button>
-            <a href={`mailto:${site.email}`} className="btn btn-outline-light">Написать мне</a>
+            <a href={site.telegram} target="_blank" rel="noreferrer" className="btn btn-outline-light">Написать мне</a>
           </div>
         </section>
 
         <section className="wrap pb-20 pt-12 text-center">
-          <p className="text-lg text-white/90">Работала над проектами для</p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-5 text-xl font-semibold text-white/55 md:text-2xl">
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 text-xl font-semibold text-white/55 md:text-2xl">
             {profile.companies.map((n) => <span key={n}>{n}</span>)}
           </div>
         </section>
@@ -49,12 +48,12 @@ export default function Home() {
           <Title id="cases">Кейсы</Title>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {cases.map((c) => (
-              <Link key={c.slug} to={`/case/${c.slug}`} className="card block p-4 transition duration-300 ease-out hover:z-10 hover:scale-[1.03] hover:border-iris/25 hover:shadow-2xl hover:shadow-deep/15">
+              <Link key={c.slug} to={`/case/${c.slug}`} className="card block !rounded-2xl p-4 transition duration-300 ease-out hover:z-10 hover:scale-[1.03] hover:border-iris/25 hover:shadow-2xl hover:shadow-deep/15">
                 <Img src={c.cover} className="" />
                 <div className="px-2 pb-3 pt-4">
                   <div className="flex flex-wrap gap-2">{c.tags.map((t) => <span key={t} className="tag">{t}</span>)}</div>
                   <h3 className="mt-4 text-xl font-bold">{c.title}</h3>
-                  <p className="mt-2 flex flex-wrap items-baseline gap-x-2 text-muted"><span className="text-base font-extrabold text-ink">{c.company}</span><span className="text-xs">{c.period}</span></p>
+                  <p className="mt-2 flex flex-wrap items-baseline gap-x-2 gap-y-1 text-muted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 self-center text-iris" aria-hidden="true"><path d="M4 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16M14 10h5a1 1 0 0 1 1 1v10M3 21h18M8 8h2M8 12h2M8 16h2"/></svg><span className="text-base font-extrabold text-ink">{c.company}</span><span className="text-xs">{c.period}</span></p>
                   <p className="mt-3 text-sm text-muted">{c.summary}</p>
                 </div>
               </Link>
