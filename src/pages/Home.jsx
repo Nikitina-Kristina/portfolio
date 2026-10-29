@@ -113,11 +113,11 @@ export default function Home() {
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {others.map((o) => (
               o.slug ? (
-                <Link key={o.title} to={`/case/${o.slug}`} className="card block p-6 transition duration-300 ease-out hover:-translate-y-1 hover:border-iris/25 hover:shadow-xl hover:shadow-deep/10">
+                <Link key={o.title} to={`/case/${o.slug}`} className="card group flex h-full flex-col p-6 transition duration-300 ease-out hover:-translate-y-1 hover:border-iris/25 hover:shadow-xl hover:shadow-deep/10">
                   <h3 className="font-bold">{o.title}</h3>
                   <p className="mt-1 font-mono text-xs text-muted">{o.org}</p>
                   <p className="mt-3 text-sm text-muted">{o.text}</p>
-                  <span className="mt-4 inline-block text-sm font-semibold text-deep">Смотреть кейс →</span>
+                  <span className="mt-auto pt-5"><span className="btn btn-sm bg-mist text-deep transition group-hover:bg-deep group-hover:text-white">Смотреть кейс</span></span>
                 </Link>
               ) : (
                 <div key={o.title} className="card p-6">
