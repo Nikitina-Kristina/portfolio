@@ -3,8 +3,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        bone: '#F5F1EA', card: '#FBF9F5', ink: '#1F1D1A',
-        muted: '#6F685D', line: '#E4DDD0', amber: '#E8A33D',
+        bone: '#F4F7FC', card: '#FFFFFF', ink: '#14213D',
+        muted: '#5B6B87', line: '#DCE4F2', amber: '#4F7BC0',
+        sky: '#6C97CC', deep: '#2F4C82', mist: '#E8EEF9',
       },
       fontFamily: {
         sans: ['Onest', 'system-ui', 'sans-serif'],

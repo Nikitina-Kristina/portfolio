@@ -5,13 +5,20 @@
 @layer base {
   html { scroll-behavior: smooth; }
   body { @apply bg-bone text-ink font-sans antialiased; }
-  ::selection { background: #E8A33D55; }
+  ::selection { background: #6C97CC55; }
 }
 @layer components {
   .wrap { @apply mx-auto max-w-5xl px-6; }
   .btn { @apply inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition; }
-  .btn-primary { @apply bg-ink text-bone hover:bg-amber hover:text-ink; }
-  .btn-ghost { @apply border border-line bg-card hover:border-ink; }
-  .tag { @apply rounded-full border border-line bg-card px-3 py-1 font-mono text-xs text-muted; }
+  .btn-primary { @apply bg-deep text-white hover:bg-sky; }
+  .btn-light { @apply bg-white text-deep hover:bg-mist; }
+  .btn-outline-light { @apply border border-white/40 text-white hover:bg-white/10; }
+  .btn-ghost { @apply border border-line bg-card hover:border-sky; }
+  .tag { @apply rounded-full bg-mist px-3 py-1 text-xs font-medium text-deep; }
   .card { @apply rounded-3xl border border-line bg-card; }
+  .grad { background: linear-gradient(135deg, #7BA3D6 0%, #5A83BC 45%, #3B5B94 100%); }
 }
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee { animation: marquee 32s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }

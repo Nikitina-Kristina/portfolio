@@ -13,27 +13,41 @@ const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior:
 export default function Home() {
   return (
     <>
-      <section className="wrap pb-16 pt-20 md:pt-28">
-        <p className="font-mono text-sm text-muted">{profile.role}</p>
-        <h1 className="mt-4 text-5xl font-extrabold leading-[1.05] md:text-7xl">{profile.name}</h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted md:text-xl">{profile.intro}</p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <button onClick={() => scrollTo('cases')} className="btn btn-primary">Смотреть кейсы</button>
-          <a href={`mailto:${site.email}`} className="btn btn-ghost">Написать мне</a>
+      <section className="wrap pt-8 md:pt-12">
+        <div className="grad overflow-hidden rounded-[2rem] px-7 py-14 text-white md:px-14 md:py-24">
+          <p className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium">{profile.role}</p>
+          <h1 className="mt-6 max-w-3xl text-5xl font-extrabold leading-[1.05] md:text-7xl">{profile.name}</h1>
+          <p className="mt-6 max-w-2xl text-lg text-white/85 md:text-xl">{profile.intro}</p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <button onClick={() => scrollTo('cases')} className="btn btn-light">Смотреть кейсы</button>
+            <a href={`mailto:${site.email}`} className="btn btn-outline-light">Написать мне</a>
+          </div>
         </div>
       </section>
+
+      <div className="mt-10 overflow-hidden bg-deep py-4 text-white" aria-hidden="true">
+        <div className="marquee flex w-max gap-10 whitespace-nowrap text-lg font-semibold">
+          {[0, 1].map((n) => (
+            <div key={n} className="flex gap-10">
+              {['Продуктовый дизайн', 'B2B и внутренние сервисы', 'Таблицы и данные', 'AI-функции', 'Исследования', 'Согласования и процессы'].map((t) => (
+                <span key={t + n} className="flex items-center gap-10">{t}<span className="text-sky">✦</span></span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
 
       <section className="wrap py-16">
         <Reveal>
           <Title id="cases">Кейсы</Title>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {cases.map((c) => (
-              <Link key={c.slug} to={`/case/${c.slug}`} className="card block p-4 transition hover:border-ink">
+              <Link key={c.slug} to={`/case/${c.slug}`} className="card block p-4 transition hover:border-sky hover:shadow-lg hover:shadow-sky/20">
                 <Img src={c.cover} className="" />
                 <div className="px-2 pb-3 pt-4">
                   <div className="flex flex-wrap gap-2">{c.tags.map((t) => <span key={t} className="tag">{t}</span>)}</div>
                   <h3 className="mt-4 text-xl font-bold">{c.title}</h3>
-                  <p className="mt-2 flex flex-wrap items-baseline gap-x-2 text-muted"><span className="text-base font-extrabold text-ink">{c.company}</span><span className="font-mono text-xs">{c.period}</span></p>
+                  <p className="mt-2 flex flex-wrap items-baseline gap-x-2 text-muted"><span className="text-base font-extrabold text-ink">{c.company}</span><span className="text-xs">{c.period}</span></p>
                   <p className="mt-3 text-sm text-muted">{c.summary}</p>
                 </div>
               </Link>
@@ -76,14 +90,14 @@ export default function Home() {
       </section>
 
       <section className="wrap py-16">
-        <Reveal className="card p-8 md:p-12">
+        <Reveal className="grad rounded-[2rem] p-8 text-white md:p-14">
           <Title id="contacts">Контакты</Title>
-          <p className="mt-3 max-w-xl text-muted">Открыта к позициям Product Designer в IT-компаниях, полностью удалённо.</p>
+          <p className="mt-3 max-w-xl text-white/85">Открыта к позициям Product Designer в IT-компаниях, полностью удалённо.</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href={`mailto:${site.email}`} className="btn btn-primary">{site.email}</a>
-            <a href={site.telegram} target="_blank" rel="noreferrer" className="btn btn-ghost">Telegram {site.telegramLabel}</a>
-            <a href={site.hh} target="_blank" rel="noreferrer" className="btn btn-ghost">Резюме на hh.ru</a>
-            <a href={asset(site.cv)} target="_blank" rel="noreferrer" className="btn btn-ghost">Скачать CV</a>
+            <a href={`mailto:${site.email}`} className="btn btn-light">{site.email}</a>
+            <a href={site.telegram} target="_blank" rel="noreferrer" className="btn btn-outline-light">Telegram {site.telegramLabel}</a>
+            <a href={site.hh} target="_blank" rel="noreferrer" className="btn btn-outline-light">Резюме на hh.ru</a>
+            <a href={asset(site.cv)} target="_blank" rel="noreferrer" className="btn btn-outline-light">Скачать CV</a>
           </div>
         </Reveal>
       </section>
