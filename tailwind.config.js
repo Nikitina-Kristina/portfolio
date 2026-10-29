@@ -7,7 +7,7 @@ export default {
         muted: '#6F685D', line: '#E4DDD0', amber: '#E8A33D',
       },
       fontFamily: {
-        sans: ['Manrope', 'system-ui', 'sans-serif'],
+        sans: ['Onest', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
     },
