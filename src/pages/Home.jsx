@@ -33,7 +33,7 @@ export default function Home() {
                 <div className="px-2 pb-3 pt-4">
                   <div className="flex flex-wrap gap-2">{c.tags.map((t) => <span key={t} className="tag">{t}</span>)}</div>
                   <h3 className="mt-4 text-xl font-bold">{c.title}</h3>
-                  <p className="mt-1 font-mono text-xs text-muted">{c.company} · {c.period}</p>
+                  <p className="mt-2 flex flex-wrap items-baseline gap-x-2 text-muted"><span className="text-base font-extrabold text-ink">{c.company}</span><span className="font-mono text-xs">{c.period}</span></p>
                   <p className="mt-3 text-sm text-muted">{c.summary}</p>
                 </div>
               </Link>

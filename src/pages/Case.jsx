@@ -15,7 +15,7 @@ export default function Case() {
       <Link to="/" className="font-mono text-sm text-muted hover:text-ink">← Все кейсы</Link>
       <div className="mt-8 flex flex-wrap gap-2">{c.tags.map((t) => <span key={t} className="tag">{t}</span>)}</div>
       <h1 className="mt-5 max-w-3xl text-4xl font-extrabold leading-tight md:text-6xl">{c.title}</h1>
-      <p className="mt-4 font-mono text-sm text-muted">{c.company} · {c.period}</p>
+      <p className="mt-4 flex flex-wrap items-baseline gap-x-3 text-muted"><span className="text-xl font-extrabold text-ink md:text-2xl">{c.company}</span><span className="font-mono text-sm">{c.period}</span></p>
       <p className="mt-6 max-w-2xl text-lg text-muted">{c.role}</p>
       <Img src={c.cover} className="my-10" />
 
