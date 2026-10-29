@@ -23,3 +23,8 @@
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee { animation: marquee 32s linear infinite; }
 @media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }
+@keyframes rise { 0% { opacity: 0; transform: translateY(36px) scale(0.96); filter: blur(10px); } 100% { opacity: 1; transform: none; filter: blur(0); } }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+.rise { opacity: 0; animation: rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.bob { animation: bob 5s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .rise { opacity: 1; animation: none; } .bob { animation: none; } }

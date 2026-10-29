@@ -27,7 +27,11 @@ export default function Home() {
 
         <section className="wrap pb-20 pt-12 text-center">
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 text-xl font-semibold text-white/55 md:text-2xl">
-            {profile.companies.map((n) => <span key={n}>{n}</span>)}
+            {profile.companies.map((n, i) => (
+              <span key={n} className="rise" style={{ animationDelay: `${0.35 + i * 0.14}s` }}>
+                <span className="bob inline-block transition-colors duration-300 hover:text-white" style={{ animationDelay: `${i * 0.6}s` }}>{n}</span>
+              </span>
+            ))}
           </div>
         </section>
       </div>
