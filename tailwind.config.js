@@ -3,9 +3,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        bone: '#F4F7FC', card: '#FFFFFF', ink: '#14213D',
-        muted: '#5B6B87', line: '#DCE4F2', amber: '#4F7BC0',
-        sky: '#6C97CC', deep: '#2F4C82', mist: '#E8EEF9', night: '#08082B', iris: '#4B3DE0',
+        bone: '#F6F6FD', card: '#FFFFFF', ink: '#10103A',
+        muted: '#5E5C85', line: '#E1E0F4', amber: '#4B3DE0',
+        sky: '#7C6CF2', deep: '#4B3DE0', mist: '#ECEBFD', night: '#08082B', iris: '#4B3DE0',
       },
       fontFamily: {
         sans: ['Onest', 'system-ui', 'sans-serif'],

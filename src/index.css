@@ -5,7 +5,7 @@
 @layer base {
   html { scroll-behavior: smooth; }
   body { @apply bg-bone text-ink font-sans antialiased; }
-  ::selection { background: #6C97CC55; }
+  ::selection { background: #4B3DE055; }
 }
 @layer components {
   .wrap { @apply mx-auto max-w-5xl px-6; }
@@ -16,7 +16,7 @@
   .btn-ghost { @apply border border-line bg-card hover:border-sky; }
   .tag { @apply rounded-full bg-mist px-3 py-1 text-xs font-medium text-deep; }
   .card { @apply rounded-3xl border border-line bg-card; }
-  .grad { background: linear-gradient(135deg, #7BA3D6 0%, #5A83BC 45%, #3B5B94 100%); }
+  .grad { background: linear-gradient(135deg, #6352F0 0%, #4B3DE0 55%, #2F2699 100%); }
 }
 
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }

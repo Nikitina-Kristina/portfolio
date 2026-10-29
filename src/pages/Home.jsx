@@ -52,7 +52,7 @@ export default function Home() {
           <div className="grid gap-10 md:grid-cols-2 md:gap-16">
             <div>
               <h2 id="about" className="scroll-mt-24 text-4xl font-extrabold leading-tight md:text-6xl">Обо мне</h2>
-              <img src={img('avatar.jpg')} alt={profile.name} className="mt-8 h-40 w-40 rounded-full border-4 border-white object-cover shadow-xl shadow-deep/20 md:h-56 md:w-56" />
+              <img src={img('avatar-portrait.jpg')} alt={profile.name} className="mt-8 aspect-[4/5] w-full max-w-sm rounded-[24px] object-cover shadow-xl shadow-deep/20" />
             </div>
             <div className="space-y-5 leading-relaxed text-ink/85 md:pt-3">
               {profile.about.map((t) => <p key={t}>{t}</p>)}
@@ -64,7 +64,7 @@ export default function Home() {
       <section className="wrap py-16">
         <Reveal>
           <Title id="skills">Навыки</Title>
-          <div className="mt-10 grid gap-6 md:grid-cols-[3fr_2fr]">
+          <div className="mt-10 grid gap-6">
             {profile.skills.map((g) => (
               <div key={g.title} className="card p-7 md:p-9">
                 <h3 className="text-2xl font-extrabold">{g.title}</h3>
@@ -78,7 +78,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-3xl bg-deep p-7 text-white md:p-9">
+          <div className="grad mt-6 rounded-3xl p-7 text-white md:p-9">
             <h3 className="text-2xl font-extrabold">Инструменты</h3>
             <div className="mt-5 flex flex-wrap gap-3">
               {profile.tools.map((t) => <span key={t} className="rounded-full bg-white/12 px-4 py-2 text-sm font-medium ring-1 ring-white/25">{t}</span>)}
