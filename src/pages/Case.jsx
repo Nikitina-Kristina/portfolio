@@ -11,7 +11,7 @@ export default function Case() {
   const next = cases[(i + 1) % cases.length]
 
   return (
-    <article className="wrap py-12 md:py-20">
+    <article className="wrap pb-12 pt-28 md:pb-20 md:pt-36">
       <Link to="/" className="font-mono text-sm text-muted hover:text-ink">← Все кейсы</Link>
       <div className="mt-8 flex flex-wrap gap-2">{c.tags.map((t) => <span key={t} className="tag">{t}</span>)}</div>
       <h1 className="mt-5 max-w-3xl text-4xl font-extrabold leading-tight md:text-6xl">{c.title}</h1>
