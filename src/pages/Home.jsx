@@ -24,28 +24,32 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="cases" className="scroll-mt-24 pb-4">
-          <div className="mx-auto flex max-w-6xl snap-x gap-5 overflow-x-auto px-6 pb-10 pt-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {cases.map((c) => (
-              <Link key={c.slug} to={`/case/${c.slug}`} className="group relative block aspect-[4/5] w-[78vw] max-w-[340px] shrink-0 snap-center overflow-hidden rounded-3xl bg-white transition duration-300 ease-out hover:z-10 hover:scale-[1.04] hover:shadow-2xl hover:shadow-iris/40 md:w-[340px]">
-                <img src={img(c.cover)} alt="" className="h-full w-full object-cover" loading="lazy" />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-night/95 via-night/70 to-transparent px-5 pb-5 pt-24">
-                  <p className="text-sm font-bold text-white/90">{c.company}</p>
-                  <h3 className="mt-1 text-lg font-bold leading-snug">{c.title}</h3>
-                  <div className="mt-3 flex flex-wrap gap-2">{c.tags.slice(0, 2).map((t) => <span key={t} className="rounded-full border border-white/40 px-3 py-1 text-xs">{t}</span>)}</div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        <section className="wrap pb-20 pt-6 text-center">
+        <section className="wrap pb-20 pt-12 text-center">
           <p className="text-lg text-white/90">Работала над проектами для</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-5 text-xl font-semibold text-white/55 md:text-2xl">
             {profile.companies.map((n) => <span key={n}>{n}</span>)}
           </div>
         </section>
       </div>
+
+      <section className="wrap pt-20 md:pt-28">
+        <Reveal>
+          <Title id="cases">Кейсы</Title>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {cases.map((c) => (
+              <Link key={c.slug} to={`/case/${c.slug}`} className="card block p-4 transition duration-300 ease-out hover:z-10 hover:scale-[1.03] hover:border-sky hover:shadow-2xl hover:shadow-deep/25">
+                <Img src={c.cover} className="" />
+                <div className="px-2 pb-3 pt-4">
+                  <div className="flex flex-wrap gap-2">{c.tags.map((t) => <span key={t} className="tag">{t}</span>)}</div>
+                  <h3 className="mt-4 text-xl font-bold">{c.title}</h3>
+                  <p className="mt-2 flex flex-wrap items-baseline gap-x-2 text-muted"><span className="text-base font-extrabold text-ink">{c.company}</span><span className="text-xs">{c.period}</span></p>
+                  <p className="mt-3 text-sm text-muted">{c.summary}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Reveal>
+      </section>
 
       <section className="wrap py-20 md:py-28">
         <Reveal>
