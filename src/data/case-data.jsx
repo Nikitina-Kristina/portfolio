@@ -204,7 +204,7 @@ export const cases = [
     ],
   },
   {
-    slug: 'innopolis-digital-twin',
+    slug: 'innopolis-digital-twin', minor: true,
     title: 'Цифровой двойник города',
     company: 'Университет Иннополис', period: '2021',
     tags: ['B2G', 'Web + Mobile', 'UI-kit'],
@@ -234,7 +234,7 @@ export const cases = [
     ],
   },
   {
-    slug: 'gazprom-document-flow',
+    slug: 'gazprom-document-flow', minor: true,
     title: 'Система электронного документооборота',
     company: 'Газпром трансгаз Казань', period: '2021',
     tags: ['B2B', 'Web', 'Документооборот'],
@@ -255,7 +255,7 @@ export const cases = [
     ],
   },
   {
-    slug: 'incident-map',
+    slug: 'incident-map', minor: true,
     title: 'Карта инцидентов',
     company: 'Университет Иннополис', period: '2021',
     tags: ['B2G', 'Web', 'Аналитика', 'Информационная архитектура'],

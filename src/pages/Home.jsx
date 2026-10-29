@@ -47,7 +47,7 @@ export default function Home() {
         <Reveal>
           <Title id="cases">Кейсы</Title>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {cases.map((c) => (
+            {cases.filter((c) => !c.minor).map((c) => (
               <Link key={c.slug} to={`/case/${c.slug}`} className="card block !rounded-2xl p-4 transition duration-300 ease-out hover:z-10 hover:scale-[1.03] hover:border-iris/25 hover:shadow-2xl hover:shadow-deep/15">
                 <Img src={c.cover} className="" />
                 <div className="px-2 pb-3 pt-4">
@@ -112,11 +112,20 @@ export default function Home() {
           <h2 className="text-2xl font-extrabold">Другие проекты</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {others.map((o) => (
-              <div key={o.title} className="card p-6">
-                <h3 className="font-bold">{o.title}</h3>
-                <p className="mt-1 font-mono text-xs text-muted">{o.org}</p>
-                <p className="mt-3 text-sm text-muted">{o.text}</p>
-              </div>
+              o.slug ? (
+                <Link key={o.title} to={`/case/${o.slug}`} className="card block p-6 transition duration-300 ease-out hover:-translate-y-1 hover:border-iris/25 hover:shadow-xl hover:shadow-deep/10">
+                  <h3 className="font-bold">{o.title}</h3>
+                  <p className="mt-1 font-mono text-xs text-muted">{o.org}</p>
+                  <p className="mt-3 text-sm text-muted">{o.text}</p>
+                  <span className="mt-4 inline-block text-sm font-semibold text-deep">Смотреть кейс →</span>
+                </Link>
+              ) : (
+                <div key={o.title} className="card p-6">
+                  <h3 className="font-bold">{o.title}</h3>
+                  <p className="mt-1 font-mono text-xs text-muted">{o.org}</p>
+                  <p className="mt-3 text-sm text-muted">{o.text}</p>
+                </div>
+              )
             ))}
           </div>
         </Reveal>

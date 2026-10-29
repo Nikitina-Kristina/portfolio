@@ -8,7 +8,8 @@ export default function Case() {
   const i = cases.findIndex((c) => c.slug === slug)
   const c = cases[i]
   if (!c) return <div className="wrap py-24"><Link to="/" className="underline">На главную</Link></div>
-  const next = cases[(i + 1) % cases.length]
+  const group = cases.filter((x) => !!x.minor === !!c.minor)
+  const next = group[(group.indexOf(c) + 1) % group.length]
 
   return (
     <article className="wrap pb-12 pt-28 md:pb-20 md:pt-36">
