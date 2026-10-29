@@ -9,12 +9,13 @@
 }
 @layer components {
   .wrap { @apply mx-auto max-w-5xl px-6; }
-  .btn { @apply inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition; }
+  .btn { @apply inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition; }
+  .btn-sm { @apply px-3.5 py-1.5 text-[13px]; }
   .btn-primary { @apply bg-deep text-white hover:bg-sky; }
   .btn-light { @apply bg-white text-deep hover:bg-mist; }
   .btn-outline-light { @apply border border-white/40 text-white hover:bg-white/10; }
   .btn-ghost { @apply border border-line bg-card hover:border-sky; }
-  .tag { @apply rounded-full bg-mist px-3 py-1 text-xs font-medium text-deep; }
+  .tag { @apply rounded-lg bg-mist px-3 py-1 text-xs font-medium text-deep; }
   .card { @apply rounded-3xl border border-line bg-card; }
   .grad { background: linear-gradient(135deg, #6352F0 0%, #4B3DE0 55%, #2F2699 100%); }
 }
