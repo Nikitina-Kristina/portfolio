@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { profile, experience, others } from '../data/data.jsx'
 import { cases } from '../data/case-data.jsx'
-import { site, asset } from '../config.js'
+import { site, asset, img } from '../config.js'
 import Reveal from '../components/Reveal.jsx'
 import Img from '../components/Img.jsx'
 
@@ -14,14 +14,17 @@ export default function Home() {
   return (
     <>
       <section className="wrap pt-8 md:pt-12">
-        <div className="grad overflow-hidden rounded-[2rem] px-7 py-14 text-white md:px-14 md:py-24">
-          <p className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium">{profile.role}</p>
-          <h1 className="mt-6 max-w-3xl text-5xl font-extrabold leading-[1.05] md:text-7xl">{profile.name}</h1>
-          <p className="mt-6 max-w-2xl text-lg text-white/85 md:text-xl">{profile.intro}</p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <button onClick={() => scrollTo('cases')} className="btn btn-light">Смотреть кейсы</button>
-            <a href={`mailto:${site.email}`} className="btn btn-outline-light">Написать мне</a>
+        <div className="grad flex flex-col-reverse items-start gap-10 overflow-hidden rounded-[2rem] px-7 py-12 text-white md:flex-row md:items-center md:justify-between md:px-14 md:py-20">
+          <div>
+            <p className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium">{profile.role}</p>
+            <h1 className="mt-6 max-w-3xl text-5xl font-extrabold leading-[1.05] md:text-7xl">{profile.name}</h1>
+            <p className="mt-6 max-w-2xl text-lg text-white/85 md:text-xl">{profile.intro}</p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <button onClick={() => scrollTo('cases')} className="btn btn-light">Смотреть кейсы</button>
+              <a href={`mailto:${site.email}`} className="btn btn-outline-light">Написать мне</a>
+            </div>
           </div>
+          <img src={img('avatar.jpg')} alt={profile.name} className="h-36 w-36 shrink-0 rounded-full border-4 border-white/70 object-cover shadow-xl shadow-deep/30 md:h-64 md:w-64" />
         </div>
       </section>
 
@@ -42,7 +45,7 @@ export default function Home() {
           <Title id="cases">Кейсы</Title>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {cases.map((c) => (
-              <Link key={c.slug} to={`/case/${c.slug}`} className="card block p-4 transition hover:border-sky hover:shadow-lg hover:shadow-sky/20">
+              <Link key={c.slug} to={`/case/${c.slug}`} className="card block p-4 transition duration-300 ease-out hover:z-10 hover:scale-[1.03] hover:border-sky hover:shadow-2xl hover:shadow-deep/20">
                 <Img src={c.cover} className="" />
                 <div className="px-2 pb-3 pt-4">
                   <div className="flex flex-wrap gap-2">{c.tags.map((t) => <span key={t} className="tag">{t}</span>)}</div>
