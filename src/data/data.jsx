@@ -36,7 +36,7 @@ export const experience = [
     text: 'Платформа для видеовстреч, вебинаров, курсов и онлайн-мероприятий. Синхронная расшифровка встреч и AI-резюме.' },
   { role: 'UX/UI Designer', company: 'Технократия', period: '12.2021–03.2023', caseSlug: 'yandex-payments',
     text: 'Клиентские проекты: кабинет учётного центра для Яндекса, «Мои субсидии» для Сбера, EdTech-сервис «Агона».' },
-  { role: 'UX/UI Designer', company: 'Университет Иннополис, Центр ГИС', period: '02.2021–12.2021',
+  { role: 'UX/UI Designer', company: 'Университет Иннополис, Центр ГИС', period: '02.2021–12.2021', caseSlug: 'innopolis-digital-twin',
     text: 'Цифровой двойник города, карта инцидентов, система документооборота для Газпром трансгаз Казань.' },
   { role: 'Mobile Designer', company: 'Rochev-studio', period: '09.2020–02.2021',
     text: 'Мобильные приложения Tatra для машинистов и PolyService.' },
