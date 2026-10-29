@@ -1,4 +1,4 @@
-// Все ссылки и контакты — только здесь
+// Все ссылки и контакты только здесь
 export const site = {
   email: 'morckaicvinka@gmail.com',
   telegram: 'https://t.me/KrNikitina',

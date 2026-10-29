@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { img } from '../config.js'
 
-// Если файла нет в репозитории — мягкая заглушка с именем файла
+// Если файла нет в репозитории: мягкая заглушка с именем файла
 export default function Img({ src, caption, className = 'my-8' }) {
   const [bad, setBad] = useState(false)
   return (

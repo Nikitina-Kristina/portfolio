@@ -5,17 +5,17 @@ export const profile = {
 }
 
 export const experience = [
-  { role: 'Продуктовый дизайнер', company: 'Ростелеком Информационные Технологии', period: '07.2024 — сейчас', caseSlug: 'salary-review',
+  { role: 'Продуктовый дизайнер', company: 'Ростелеком Информационные Технологии', period: '07.2024–сейчас', caseSlug: 'salary-review',
     text: 'Студия дизайна Ростелекома. Внутренние продукты для HR и управления оргструктурой: система пересмотра зарплат и система управления оргструктурой.' },
-  { role: 'Product Designer', company: 'Вебинар Технологии (МТС Линк)', period: '03.2023 — 05.2024', caseSlug: 'mts-link-transcription',
+  { role: 'Product Designer', company: 'Вебинар Технологии (МТС Линк)', period: '03.2023–05.2024', caseSlug: 'mts-link-transcription',
     text: 'Платформа для видеовстреч, вебинаров, курсов и онлайн-мероприятий. Синхронная расшифровка встреч и AI-резюме.' },
-  { role: 'UX/UI Designer', company: 'Технократия', period: '12.2021 — 03.2023', caseSlug: 'yandex-payments',
+  { role: 'UX/UI Designer', company: 'Технократия', period: '12.2021–03.2023', caseSlug: 'yandex-payments',
     text: 'Клиентские проекты: кабинет учётного центра для Яндекса, «Мои субсидии» для Сбера, EdTech-сервис «Агона».' },
-  { role: 'UX/UI Designer', company: 'Университет Иннополис, Центр ГИС', period: '02.2021 — 12.2021',
+  { role: 'UX/UI Designer', company: 'Университет Иннополис, Центр ГИС', period: '02.2021–12.2021',
     text: 'Цифровой двойник города, карта инцидентов, система документооборота для Газпром трансгаз Казань.' },
-  { role: 'Mobile Designer', company: 'Rochev-studio', period: '09.2020 — 02.2021',
+  { role: 'Mobile Designer', company: 'Rochev-studio', period: '09.2020–02.2021',
     text: 'Мобильные приложения Tatra для машинистов и PolyService.' },
-  { role: 'Web-дизайнер', company: 'Well Media', period: '02.2020 — 09.2020',
+  { role: 'Web-дизайнер', company: 'Well Media', period: '02.2020–09.2020',
     text: 'Разработка сайтов на Tilda, UX-аудит.' },
 ]
 
