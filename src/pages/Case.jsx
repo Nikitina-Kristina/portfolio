@@ -24,7 +24,10 @@ export default function Case() {
         {c.sections.map((s) => (
           <Reveal key={s.h} className="mt-14">
             <h2 className="text-2xl font-extrabold md:text-3xl">{s.h}</h2>
+            {s.note && <p className="mt-2 text-muted">{s.note}{s.link && <> <a href={s.link.href} target="_blank" rel="noreferrer" className="font-semibold text-deep underline-offset-4 hover:underline">{s.link.label} ↗</a></>}</p>}
+            {s.pTitle && <h3 className="mt-6 text-xl font-extrabold">{s.pTitle}</h3>}
             {s.p?.map((t, k) => <p key={k} className="mt-4 leading-relaxed text-ink/90">{t}</p>)}
+            {s.listTitle && <h3 className="mt-8 text-xl font-extrabold">{s.listTitle}</h3>}
             {s.list && (
               <ul className="mt-4 space-y-3">
                 {s.list.map((t, k) => (
