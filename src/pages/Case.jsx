@@ -39,6 +39,8 @@ export default function Case() {
                 <h3 className="text-xl font-extrabold">{u.h}</h3>
                 {u.p?.map((x, k) => <p key={k} className="mt-3 leading-relaxed text-ink/90">{x}</p>)}
                 {u.img?.map((im) => <Img key={im.src} src={im.src} caption={im.caption} />)}
+                {u.p2?.map((x, k) => <p key={k} className="mt-6 leading-relaxed text-ink/90">{x}</p>)}
+                {u.img2?.map((im) => <Img key={im.src} src={im.src} caption={im.caption} />)}
               </div>
             ))}
             {s.img?.map((im) => <Img key={im.src} src={im.src} caption={im.caption} />)}
