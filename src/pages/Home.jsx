@@ -16,10 +16,14 @@ export default function Home() {
     <>
       <div className="bg-night text-white" style={{ backgroundImage: 'radial-gradient(ellipse 70% 40% at 50% 0%, rgba(99,82,240,0.85) 0%, rgba(99,82,240,0) 70%)' }}>
         <section className="wrap pb-16 pt-32 text-center md:pt-40">
-          <p className="text-sm text-white/70">{profile.role}</p>
-          <h1 className="mx-auto mt-5 max-w-3xl text-4xl font-extrabold leading-[1.1] md:text-6xl">{profile.name}, продуктовый дизайнер</h1>
-          <p className="mx-auto mt-5 max-w-xl text-white/70">B2B и B2G продукты: сложные данные, роли и согласования простым языком интерфейса.</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <p className="rise text-sm text-white/70" style={{ animationDelay: '0.1s' }}>{profile.role}</p>
+          <h1 className="mx-auto mt-5 max-w-3xl text-4xl font-extrabold leading-[1.1] md:text-6xl">
+            {`${profile.name}, продуктовый дизайнер`.split(' ').map((w, i) => (
+              <span key={i} className="rise inline-block" style={{ animationDelay: `${0.25 + i * 0.12}s` }}>{w}{'\u00A0'}</span>
+            ))}
+          </h1>
+          <p className="rise mx-auto mt-5 max-w-xl text-white/70" style={{ animationDelay: '0.85s' }}>B2B и B2G продукты: сложные данные, роли и согласования простым языком интерфейса.</p>
+          <div className="rise mt-8 flex flex-wrap justify-center gap-3" style={{ animationDelay: '1.2s' }}>
             <button onClick={() => scrollTo('cases')} className="btn bg-iris text-white hover:bg-white hover:text-iris">Смотреть кейсы</button>
             <a href={site.telegram} target="_blank" rel="noreferrer" className="btn btn-outline-light">Написать мне</a>
           </div>
@@ -28,7 +32,7 @@ export default function Home() {
         <section className="wrap pb-20 pt-12 text-center">
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 text-xl font-semibold text-white/55 md:text-2xl">
             {profile.companies.map((n, i) => (
-              <span key={n} className="rise" style={{ animationDelay: `${0.35 + i * 0.14}s` }}>
+              <span key={n} className="rise" style={{ animationDelay: `${1.7 + i * 0.14}s` }}>
                 <span className="bob inline-block transition-colors duration-300 hover:text-white" style={{ animationDelay: `${i * 0.6}s` }}>{n}</span>
               </span>
             ))}
