@@ -1,3 +1,4 @@
+import Footer from '../components/Footer.jsx'
 import { Link, useParams } from 'react-router-dom'
 import { cases } from '../data/case-data.jsx'
 import Img from '../components/Img.jsx'
@@ -12,6 +13,7 @@ export default function Case() {
   const next = group[(group.indexOf(c) + 1) % group.length]
 
   return (
+    <>
     <article className="wrap pb-12 pt-28 md:pb-20 md:pt-36">
       <Link to="/" className="font-mono text-sm text-muted hover:text-ink">← Все кейсы</Link>
       <div className="mt-8 flex flex-wrap gap-2">{c.tags.map((t) => <span key={t} className="tag">{t}</span>)}</div>
@@ -64,5 +66,7 @@ export default function Case() {
         <Link to={`/case/${next.slug}`} className="mt-2 block text-2xl font-extrabold hover:underline">{next.title} →</Link>
       </div>
     </article>
+    <Footer />
+    </>
   )
 }

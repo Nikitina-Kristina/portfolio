@@ -4,6 +4,7 @@ import { cases } from '../data/case-data.jsx'
 import { site, asset, img } from '../config.js'
 import Reveal from '../components/Reveal.jsx'
 import Img from '../components/Img.jsx'
+import Footer from '../components/Footer.jsx'
 
 const Title = ({ id, children }) => (
   <h2 id={id} className="scroll-mt-24 text-3xl font-extrabold md:text-4xl">{children}</h2>
@@ -131,7 +132,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <div className="bg-night text-white" style={{ backgroundImage: 'radial-gradient(ellipse 70% 55% at 50% 0%, rgba(99,82,240,0.85) 0%, rgba(99,82,240,0) 70%)' }}>
+      <div className="bg-night text-white" style={{ backgroundImage: 'radial-gradient(ellipse 70% 62% at 50% 100%, rgba(150,142,226,0.95) 0%, rgba(99,82,240,0.62) 32%, rgba(75,61,224,0.22) 58%, rgba(8,8,43,0) 80%)' }}>
         <section className="wrap py-24 text-center md:py-32">
           <Reveal>
             <h2 id="contacts" className="scroll-mt-24 text-4xl font-extrabold leading-tight md:text-6xl">Контакты</h2>
@@ -143,6 +144,7 @@ export default function Home() {
             </div>
           </Reveal>
         </section>
+        <Footer embedded />
       </div>
     </>
   )
