@@ -63,6 +63,32 @@ export default function Home() {
 
       <section className="wrap py-16">
         <Reveal>
+          <Title id="skills">Навыки</Title>
+          <div className="mt-10 grid gap-6 md:grid-cols-[3fr_2fr]">
+            {profile.skills.map((g) => (
+              <div key={g.title} className="card p-7 md:p-9">
+                <h3 className="text-2xl font-extrabold">{g.title}</h3>
+                <ul className="mt-5 space-y-3">
+                  {g.items.map((t) => (
+                    <li key={t} className="relative pl-5 leading-relaxed text-ink/85">
+                      <span className="absolute left-0 top-[0.65em] h-1.5 w-1.5 rounded-full bg-amber" />{t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 rounded-3xl bg-deep p-7 text-white md:p-9">
+            <h3 className="text-2xl font-extrabold">Инструменты</h3>
+            <div className="mt-5 flex flex-wrap gap-3">
+              {profile.tools.map((t) => <span key={t} className="rounded-full bg-white/12 px-4 py-2 text-sm font-medium ring-1 ring-white/25">{t}</span>)}
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="wrap py-16">
+        <Reveal>
           <Title id="experience">Опыт</Title>
           <div className="mt-10 divide-y divide-line border-y border-line">
             {experience.map((e) => (

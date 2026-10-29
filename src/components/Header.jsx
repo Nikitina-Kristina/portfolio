@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
-const items = [['about', 'Обо мне'], ['cases', 'Кейсы'], ['experience', 'Опыт'], ['contacts', 'Контакты']]
+const items = [['about', 'Обо мне'], ['cases', 'Кейсы'], ['skills', 'Навыки'], ['experience', 'Опыт'], ['contacts', 'Контакты']]
 
 export default function Header() {
   const nav = useNavigate()
